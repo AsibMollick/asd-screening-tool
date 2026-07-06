@@ -12,3 +12,4 @@ ENV/
 *.xlsx
 *.pdf
 *.txt
+!requirements.txt
