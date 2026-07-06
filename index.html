@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="অটিজম স্পেকট্রাম ডিসঅর্ডার (ASD) স্ক্রিনিং টুল - গবেষণামূলক প্রকল্প। কিছু সহজ প্রশ্নের উত্তর দিন, আমাদের AI সিস্টেম বিশ্লেষণ করবে।">
+    <title>ASD স্ক্রিনিং টুল | অটিজম সচেতনতায় একটি গবেষণা প্রকল্প</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.maateen.me/solaiman-lipi/font.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Animated Background Particles -->
+    <div class="bg-particles" id="bg-particles"></div>
+
+    <!-- ===================== HERO / LANDING SECTION ===================== -->
+    <section class="hero-section" id="hero-section">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <div class="brand-icon">
+                    <svg viewBox="0 0 40 40" fill="none">
+                        <circle cx="20" cy="20" r="18" stroke="url(#grad1)" stroke-width="2.5"/>
+                        <circle cx="20" cy="14" r="4" fill="url(#grad1)"/>
+                        <path d="M12 28c0-4.4 3.6-8 8-8s8 3.6 8 8" stroke="url(#grad1)" stroke-width="2.5" stroke-linecap="round"/>
+                        <circle cx="10" cy="20" r="2" fill="#6C63FF" opacity="0.5"/>
+                        <circle cx="30" cy="20" r="2" fill="#00D4AA" opacity="0.5"/>
+                        <defs>
+                            <linearGradient id="grad1" x1="0" y1="0" x2="40" y2="40">
+                                <stop offset="0%" stop-color="#6C63FF"/>
+                                <stop offset="100%" stop-color="#00D4AA"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <span class="brand-name">ASD স্ক্রিনিং</span>
+            </div>
+            <div class="nav-links">
+                <a href="#about-section" class="nav-link">সম্পর্কে</a>
+                <a href="#how-section" class="nav-link">কীভাবে কাজ করে</a>
+                <a href="#signs-section" class="nav-link">লক্ষণসমূহ</a>
+                <button class="nav-btn" onclick="scrollToForm()">পরীক্ষা শুরু করুন</button>
+            </div>
+        </nav>
+
+        <div class="hero-content">
+            <div class="hero-badge">🎓 গবেষণামূলক প্রকল্প</div>
+            <h1 class="hero-title">
+                অটিজম স্পেকট্রাম ডিসঅর্ডার<br>
+                <span class="gradient-text">প্রাথমিক স্ক্রিনিং টুল</span>
+            </h1>
+            <p class="hero-desc">
+                এই টুলটি অটিজম সচেতনতা বৃদ্ধি ও প্রাথমিক সনাক্তকরণে সহায়তার জন্য তৈরি একটি গবেষণামূলক প্রকল্প। কিছু সহজ প্রশ্নের উত্তর দিন — আমাদের কৃত্রিম বুদ্ধিমত্তা (AI) ভিত্তিক সিস্টেম আপনার তথ্য বিশ্লেষণ করে একটি প্রাথমিক ধারণা দেবে।
+            </p>
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <div class="stat-value">🧠</div>
+                    <div class="stat-label">AI-ভিত্তিক বিশ্লেষণ</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">🔒</div>
+                    <div class="stat-label">সম্পূর্ণ গোপনীয়</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">⚡</div>
+                    <div class="stat-label">মাত্র ৩ মিনিট</div>
+                </div>
+            </div>
+            <button class="hero-cta" onclick="scrollToForm()">
+                <span>স্ক্রিনিং শুরু করুন</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+        </div>
+
+        <div class="scroll-indicator" onclick="document.getElementById('about-section').scrollIntoView({behavior:'smooth'})">
+            <div class="scroll-mouse">
+                <div class="scroll-dot"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== ABOUT SECTION ===================== -->
+    <section class="about-section" id="about-section">
+        <div class="section-container">
+            <h2 class="section-title">অটিজম কী ও কেন জানা জরুরি?</h2>
+            <p class="section-subtitle">অটিজম স্পেকট্রাম ডিসঅর্ডার (ASD) সম্পর্কে সঠিক জ্ঞান — প্রাথমিক পদক্ষেপের ভিত্তি</p>
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-icon">🧩</div>
+                    <h3>অটিজম কী?</h3>
+                    <p>অটিজম স্পেকট্রাম ডিসঅর্ডার (ASD) মস্তিষ্কের একটি বিকাশজনিত অবস্থা, যা মানুষের সামাজিক যোগাযোগ, আচরণ এবং শেখার ধরনে প্রভাব ফেলতে পারে। এটি কোনো রোগ নয় — এটি একটি ভিন্ন ধরনের স্নায়ুবিকাশ।</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">⏰</div>
+                    <h3>তাড়াতাড়ি জানা কেন গুরুত্বপূর্ণ?</h3>
+                    <p>গবেষণায় দেখা গেছে, অটিজম যত আগে শনাক্ত করা যায়, থেরাপি ও সহায়তার মাধ্যমে শিশুর বিকাশ তত ভালো হয়। প্রাথমিক হস্তক্ষেপ একটি শিশুর পুরো জীবনকে ইতিবাচকভাবে বদলে দিতে পারে।</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">🌍</div>
+                    <h3>বাংলাদেশে অটিজম</h3>
+                    <p>বাংলাদেশে প্রতি ৬৮ জন শিশুর মধ্যে ১ জনের অটিজম থাকতে পারে বলে ধারণা করা হয়। তবে সচেতনতার অভাবে অনেক পরিবার এটি সময়মতো বুঝতে পারে না, ফলে থেরাপি শুরু করতে দেরি হয়ে যায়।</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== HOW IT WORKS SECTION ===================== -->
+    <section class="how-section" id="how-section">
+        <div class="section-container">
+            <h2 class="section-title">এই টুলটি কীভাবে কাজ করে?</h2>
+            <p class="section-subtitle">মাত্র ৩টি সহজ ধাপে আপনি একটি প্রাথমিক ধারণা পেতে পারেন</p>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-card-num">১</div>
+                    <h3>ব্যক্তিগত তথ্য দিন</h3>
+                    <p>বয়স ও লিঙ্গ জানান। বয়সের ওপর ভিত্তি করে আমাদের সিস্টেম উপযুক্ত প্রশ্নমালা নির্বাচন করবে।</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-card-num">২</div>
+                    <h3>প্রশ্নের উত্তর দিন</h3>
+                    <p>আন্তর্জাতিকভাবে স্বীকৃত AQ-10 প্রশ্নমালার ভিত্তিতে ১০টি সহজ প্রশ্নের উত্তর দিন "হ্যাঁ" অথবা "না" দিয়ে।</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-card-num">৩</div>
+                    <h3>ফলাফল জানুন</h3>
+                    <p>আমাদের AI সিস্টেম আপনার উত্তর বিশ্লেষণ করে তৎক্ষণাৎ একটি প্রাথমিক ধারণা দেবে। প্রয়োজনে বিশেষজ্ঞ চিকিৎসকের পরামর্শ নিন।</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== SIGNS SECTION ===================== -->
+    <section class="signs-section" id="signs-section">
+        <div class="section-container">
+            <h2 class="section-title">অটিজমের সাধারণ লক্ষণসমূহ</h2>
+            <p class="section-subtitle">নিচের লক্ষণগুলো দেখলে একজন বিশেষজ্ঞের সাথে কথা বলুন</p>
+            <div class="signs-grid">
+                <div class="sign-card">
+                    <div class="sign-icon">👁️</div>
+                    <p>চোখে চোখ রেখে তাকাতে সমস্যা</p>
+                </div>
+                <div class="sign-card">
+                    <div class="sign-icon">🗣️</div>
+                    <p>কথা বলতে দেরি বা কথায় অসুবিধা</p>
+                </div>
+                <div class="sign-card">
+                    <div class="sign-icon">🔄</div>
+                    <p>একই কাজ বারবার পুনরাবৃত্তি করা</p>
+                </div>
+                <div class="sign-card">
+                    <div class="sign-icon">👫</div>
+                    <p>সমবয়সীদের সাথে মিশতে না চাওয়া</p>
+                </div>
+                <div class="sign-card">
+                    <div class="sign-icon">🔊</div>
+                    <p>শব্দ, আলো বা স্পর্শে অতিরিক্ত প্রতিক্রিয়া</p>
+                </div>
+                <div class="sign-card">
+                    <div class="sign-icon">😶</div>
+                    <p>অন্যের অনুভূতি বুঝতে না পারা</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== CTA SECTION ===================== -->
+    <section class="cta-section" id="cta-section">
+        <div class="section-container">
+            <div class="cta-card">
+                <h2>এখনই বিনামূল্যে স্ক্রিনিং করুন</h2>
+                <p>মাত্র কয়েক মিনিটে জানুন আপনার বা আপনার সন্তানের অটিজম স্ক্রিনিং এর প্রাথমিক ফলাফল। এই টুলটি সম্পূর্ণ বিনামূল্যে এবং আপনার সমস্ত তথ্য গোপনীয়।</p>
+                <button class="hero-cta" onclick="scrollToForm()">
+                    <span>স্ক্রিনিং শুরু করুন</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== SCREENING FORM SECTION ===================== -->
+    <section class="form-section" id="form-section" style="display: none;">
+        <div class="section-container">
+            <!-- Back Button to Home -->
+            <button type="button" class="btn-back-home" onclick="showHomePage()">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                হোমে ফিরুন
+            </button>
+
+            <h2 class="section-title">ASD স্ক্রিনিং ফর্ম</h2>
+            <p class="section-subtitle">নিচের তথ্য ও প্রশ্নগুলোর উত্তর দিন। আপনার তথ্য সম্পূর্ণ গোপনীয় থাকবে।</p>
+
+            <form class="screening-form" id="screening-form" onsubmit="handleSubmit(event)">
+                <!-- Progress Bar -->
+                <div class="form-progress">
+                    <div class="progress-bar" id="progress-bar"></div>
+                    <div class="progress-text" id="progress-text">ধাপ ১ / ৩</div>
+                </div>
+
+                <!-- Step 1: Personal Information -->
+                <div class="form-step active" id="step-1">
+                    <div class="step-header">
+                        <div class="step-number">১</div>
+                        <div>
+                            <h3>ব্যক্তিগত তথ্য</h3>
+                            <p>সঠিক বিশ্লেষণের জন্য বয়স ও লিঙ্গ দিন</p>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label class="input-label" for="age-input">বয়স (বছর)</label>
+                        <input type="number" class="form-input" id="age-input" min="1" max="100" value="" placeholder="বয়স লিখুন">
+                    </div>
+
+                    <div class="input-group">
+                        <label class="input-label">বয়সের গ্রুপ (বয়স অনুযায়ী স্বয়ংক্রিয়ভাবে নির্ধারিত)</label>
+                        <div class="select-grid readonly-grid">
+                            <div class="select-card" data-field="Group" data-value="1">
+                                <span class="select-icon">👶</span>
+                                <span class="select-text">শিশু (Toddler)</span>
+                                <span class="select-range">০-৩ বছর</span>
+                            </div>
+                            <div class="select-card" data-field="Group" data-value="2">
+                                <span class="select-icon">🧒</span>
+                                <span class="select-text">বালক (Children)</span>
+                                <span class="select-range">৪-১১ বছর</span>
+                            </div>
+                            <div class="select-card" data-field="Group" data-value="3">
+                                <span class="select-icon">🧑</span>
+                                <span class="select-text">কিশোর (Adolescence)</span>
+                                <span class="select-range">১২-১৭ বছর</span>
+                            </div>
+                            <div class="select-card" data-field="Group" data-value="4">
+                                <span class="select-icon">👨</span>
+                                <span class="select-text">প্রাপ্তবয়স্ক (Adult)</span>
+                                <span class="select-range">১৮+ বছর</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label class="input-label">লিঙ্গ</label>
+                        <div class="toggle-group wide">
+                            <button type="button" class="toggle-btn" data-field="Sex" data-value="1" onclick="setAnswer(this)">👦 ছেলে</button>
+                            <button type="button" class="toggle-btn" data-field="Sex" data-value="0" onclick="setAnswer(this)">👧 মেয়ে</button>
+                        </div>
+                    </div>
+
+                    <div class="step-nav">
+                        <div></div>
+                        <button type="button" class="btn-next" onclick="nextStep(2)">
+                            পরবর্তী
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Step 2: Medical History -->
+                <div class="form-step" id="step-2">
+                    <div class="step-header">
+                        <div class="step-number">২</div>
+                        <div>
+                            <h3>চিকিৎসা সংক্রান্ত তথ্য</h3>
+                            <p>মেডিকেল হিস্ট্রি সংক্রান্ত তথ্য</p>
+                        </div>
+                    </div>
+
+                    <div class="question-card" id="q-jaundice">
+                        <div class="question-label">
+                            <span class="q-num">🟡</span>
+                            জন্মের সময় জন্ডিস হয়েছিল?
+                        </div>
+                        <div class="toggle-group">
+                            <button type="button" class="toggle-btn" data-field="Jaundice" data-value="1" onclick="setAnswer(this)">হ্যাঁ</button>
+                            <button type="button" class="toggle-btn" data-field="Jaundice" data-value="0" onclick="setAnswer(this)">না</button>
+                        </div>
+                    </div>
+
+                    <div class="question-card" id="q-family">
+                        <div class="question-label">
+                            <span class="q-num">👨‍👩‍👧</span>
+                            পরিবারে কেউ কি ASD-তে আক্রান্ত?
+                        </div>
+                        <div class="toggle-group">
+                            <button type="button" class="toggle-btn" data-field="Family_ASD" data-value="1" onclick="setAnswer(this)">হ্যাঁ</button>
+                            <button type="button" class="toggle-btn" data-field="Family_ASD" data-value="0" onclick="setAnswer(this)">না</button>
+                        </div>
+                    </div>
+
+                    <div class="step-nav">
+                        <button type="button" class="btn-prev" onclick="prevStep(1)">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                            পূর্ববর্তী
+                        </button>
+                        <button type="button" class="btn-next" onclick="nextStep(3)">
+                            পরবর্তী
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Step 3: All 10 Behavioral Questions Together (Dynamically Loaded) -->
+                <div class="form-step" id="step-3">
+                    <div class="step-header">
+                        <div class="step-number">৩</div>
+                        <div>
+                            <h3>আচরণগত প্রশ্নমালা</h3>
+                            <p>শেষ ধাপ — লক্ষণগুলো মিলিয়ে সাবমিট করুন</p>
+                        </div>
+                    </div>
+
+                    <!-- Dynamic Questions Container -->
+                    <div id="questions-container"></div>
+
+                    <div class="step-nav">
+                        <button type="button" class="btn-prev" onclick="prevStep(2)">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                            পূর্ববর্তী
+                        </button>
+                        <button type="submit" class="btn-submit" id="submit-btn">
+                            <span class="btn-text">ফলাফল দেখুন</span>
+                            <span class="btn-loader" style="display:none;">
+                                <svg class="spinner" width="20" height="20" viewBox="0 0 24 24"><circle class="spinner-circle" cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="3"></circle></svg>
+                                বিশ্লেষণ হচ্ছে...
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- ===================== RESULT SECTION ===================== -->
+    <section class="result-section" id="result-section" style="display:none;">
+        <div class="section-container">
+            <div class="result-card" id="result-card">
+                <div class="result-icon" id="result-icon"></div>
+                <h2 class="result-title" id="result-title"></h2>
+                <p class="result-desc" id="result-desc"></p>
+
+                <!-- Probability Gauge -->
+                <div class="gauge-container">
+                    <div class="gauge-label">ASD সম্ভাবনা</div>
+                    <div class="gauge-bar">
+                        <div class="gauge-fill" id="gauge-fill"></div>
+                    </div>
+                    <div class="gauge-value" id="gauge-value">0%</div>
+                </div>
+
+                <div class="result-details" id="result-details"></div>
+
+                <div class="disclaimer">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                    <p><strong>গুরুত্বপূর্ণ:</strong> এটি একটি গবেষণামূলক প্রাথমিক স্ক্রিনিং টুল। এটি কোনো চিকিৎসকের পরামর্শের বিকল্প নয়। নিশ্চিত নির্ণয়ের জন্য অবশ্যই বিশেষজ্ঞ চিকিৎসকের সাথে পরামর্শ করুন।</p>
+                </div>
+
+                <div class="result-actions">
+                    <button class="btn-retry" onclick="resetForm()">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg>
+                        আবার পরীক্ষা করুন
+                    </button>
+                    <button class="btn-home" onclick="showHomePage()">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                        হোমপেজে যান
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© ২০২৬ ASD স্ক্রিনিং টুল | একটি গবেষণামূলক প্রকল্প</p>
+            <p class="footer-small">এই টুলটি গবেষণা ও শিক্ষামূলক উদ্দেশ্যে তৈরি। চিকিৎসকের পরামর্শের বিকল্প নয়।</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
